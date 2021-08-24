@@ -108,6 +108,9 @@
   width: 889px;
   height: 658px;
 }
+.meal_img picture img {
+  box-shadow: 7px -1px 11px 6px rgba(0, 0, 0, 0.19);
+}
 .meal_description {
   position: absolute; top: 50%; left: 0;
   transform: translateY(-50%);
