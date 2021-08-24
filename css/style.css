@@ -6,11 +6,16 @@
 #program {width: 100%;}
 #meal_box {width: 100%;}
 #campus {width: 100%;}
+#promotion {width: 100%;}
+#community {width: 100%;}
 
 /* 가운데 영역 */
 .container {width: 1440px; margin: 0 auto;}
 .row {margin: 0 93px;}
-.line {font-size: 0; text-align: center; padding: 50px 0;}
+.line {text-align: center; padding: 50px 0;}
+
+/* 고정값 */
+.sub_title {margin-bottom: 5px;}
 
 /* decription copy */
 /* .description .title {font-size: 48px; font-weight: bold; color: #2c2620;}
@@ -138,27 +143,109 @@
 }
 
 /* campus */
-.campus {}
-.campus_description {
+.campus {
+  position: relative;
+}
+.campus .campus_description {
+  width: 577px; height: 506px;
   font-size: 32px; font-weight: bold; color: #2c2620;
+  border: 2px solid #2c2620;
+  border-radius: 30px;
+  background: #fff;
+  padding: 56px 42px 63px 52px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 10px rgba(0,0,0,.1);
+  margin: 0 0 0 52px;
 }
-.campus_description .desc {
+.campus .campus_description h2 .sub_title {
+  font-size: 18px;
+  font-weight: 600;
+}
+.campus .campus_description h2 .title {
+  font-size: 32px;
+  font-weight: bold;
+}
+.campus .campus_description .desc {
   font-size: 15px; 
+  font-weight: normal;
   color: #565656; margin-top: 40px; 
-  width: 471px; height: 121px;
 }
-.campus_description button {
-  width: 200px;
+.campus .campus_description .desc span {
+  display: block;
+  font-weight: 600;
+  color: #2c2620;
+  margin-bottom: 7px;
+}
+.campus .campus_description .button {
+  width: 148px;
   height: 60px;
-  flex-grow: 0;
   border-radius: 30px;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.25);
-  border: solid 1px #2c2620;
-  background-color: rgba(255, 255, 255, 0.5);
-  margin-top: 40px;
+  background-color: #fbbe20;
+  margin-top: 48px;
+  font-size: 20px;
+  font-weight: 800;
+}
+.campus .illust {
+  position: absolute; top: 0px; right: 100px;
 }
 
+/* promotion */
+.promotion {
+  display: flex;
+  align-items: center;
+}
+.promotion .illust svg {
+  width: 774px;
+  height: 481px;
+}
+.promotion_description h2 .sub_title {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+}
+.promotion_description h2 .title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 40px 0;
+}
+.promotion_description .desc {
+  font-size: 15px; 
+  font-weight: normal;
+  color: #565656;
+  margin-top: 40px;
+}
+.promotion_description .button {
+  width: 252px;
+  height: 60px;
+  border-radius: 30px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.25);
+  background-color: #fbbe20;
+  margin-top: 48px;
+  font-size: 20px;
+  font-weight: 800;
+}
 
+/* community */
+.community {}
+.community h2 {
+  text-align: center;
+}
+.community .title {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0 0 40px 0;
+}
+.community .sub_title {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+}
+.community .content_1 img {
+  width: 350px;
+  height: 380px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.25);
+}
 
 /* 미디어쿼리 */
 @media (max-width: 1290px){
