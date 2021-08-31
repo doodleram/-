@@ -41,19 +41,11 @@
                 <picture>
                   <source media="(min-width: 800px)" srcset="img/logo@3x.jpg">
                   <source media="(min-width: 600px)" srcset="img/logo@2x.jpg">
-                  <img src="img/logo.jpg" srcset="img/logo.jpg 1x, img/ogo@2x.png 2x, img/ogo@3x.jpg 3x" alt="메인 배너">
+                  <img src="img/logo.jpg" srcset="img/logo.jpg 1x, img/logo@2x.jpg 2x, img/logo@3x.jpg 3x" alt="메인 배너">
                 </picture>
               </a>
-            </h1>
-            <div class="menu_bar">
-              <a href="#">
-                <svg width="42" height="34" viewBox="0 0 42 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="42" height="6" fill="#2C2620"/>
-                <rect y="14" width="42" height="6" fill="#2C2620"/>
-                <rect y="28" width="42" height="6" fill="#2C2620"/>
-                </svg>
-              </a>
-            </div>
+            </h1>        
+            </nav>         
             <nav class="lnb">
               <ul>
                 <li>
@@ -110,8 +102,65 @@
                 </svg>
               </a>
             </div>
+            <div class="menu_bar">
+              <a href="#">
+                <svg width="42" height="34" viewBox="0 0 42 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="42" height="6" fill="#2C2620"/>
+                <rect y="14" width="42" height="6" fill="#2C2620"/>
+                <rect y="28" width="42" height="6" fill="#2C2620"/>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
+        <nav class="m_nav">
+          <ul class="m_menu">
+            <li>
+              <a href="#">센터 소개</a>
+                <ul class="menu2">
+                  <li><a href="#">강사 소개</a></li>
+                  <li><a href="#">오시는 길</a></li>
+                  <li><a href="#">지점 찾기</a></li>
+                </ul>
+            </li>
+            <li>
+              <a href="#">레슨 코스</a>
+                <ul class="menu2">
+                  <li><a href="#">레슨 종류</a></li>
+                  <li><a href="#">초급반</a></li>
+                  <li><a href="#">중급반</a></li>
+                  <li><a href="#">고급반</a></li>
+                  <li><a href="#">온라인 클래스</a></li>
+                  <li><a href="#">필라테스 캠프</a></li>
+                </ul>
+            </li>
+            <li>
+              <a href="#">회원등록</a>
+                <ul class="menu2">
+                  <li><a href="#">신규회원</a></li>
+                  <li><a href="#">기존회원</a></li>
+                  <li><a href="#">회원카드 발급</a></li>
+                </ul>
+            </li>
+            <li>
+              <a href="#">마켓</a>
+                <ul class="menu2">
+                  <li><a href="#">식품</a></li>
+                  <li><a href="#">운동 용품</a></li>
+                  <li><a href="#">나눔 장터</a></li>
+                  <li><a href="#">세일상품</a></li>
+                </ul>
+            </li>
+            <li>
+              <a href="#">커뮤니티</a>
+                <ul class="menu2">
+                  <li><a href="#">News &amp; Notice</a></li>
+                  <li><a href="#">Sns</a></li>
+                  <li><a href="#">고객센터</a></li>
+                </ul>
+            </li>
+          </ul> 
+        </nav>
       </div>
     </header>
     <!-- //header -->
@@ -316,7 +365,7 @@
             <picture>
               <source media="(min-width: 800px)" srcset="img/banner_1@3x.png">
               <source media="(min-width: 600px)" srcset="img/banner_1@2x.png">
-              <img src="img/banner_1.png" srcset="img/banner_1.png 1x, img/banner_@2x.png 2x, img/banner_@3x.png 3x " alt="다이어트 도시락">
+              <img src="img/banner_1.png" srcset="img/banner_1.png 1x, img/banner_1@2x.png 2x, img/banner_1@3x.png 3x " alt="다이어트 도시락">
             </picture> 
           </div>
           <!-- //meal_img -->
@@ -335,24 +384,6 @@
       <div class="container">
         <div class="row">
           <div class="campus clearfix">
-            <div class="campus_description">
-              <h2>
-                <em class="sub_title">나를 찾아 떠나는 여정</em><br>
-                <strong class="title">필라테스 캠퍼스 5기를 모집합니다.<br></strong>
-              </h2>       
-              <p class="desc">
-                <span>자격 요건</span>
-                지방의회의 조직·권한·의원선거와 지방자치단체의 장의 선임방법 기타 지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다. 대통령은 국가의 독립·영토의 보전·국가의 계속성과 헌법을 수호할 책무를 진다.
-              </p>     
-              <p class="desc">
-                <span>신청 방법</span>
-                교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. 모든 국민은 언론·출판의 자유와 집회·결사의 자유를 가진다.
-              </p>
-              <button class="button">
-                <span><strong>신청하기</strong></span>
-              </button>
-            </div>
-            <!-- //campus_description -->
             <div class="illust">
               <svg width="632" height="561" viewBox="0 0 632 561" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M383.485 483.391C383.485 483.391 311.02 367.672 214.968 367.672C107.288 367.672 60.8616 481.837 60.8616 481.837L383.485 483.391Z" fill="#E6E6E6"/>
@@ -572,6 +603,24 @@
               </svg>
             </div>
             <!-- //illust -->
+            <div class="campus_description">
+              <h2>
+                <em class="sub_title">나를 찾아 떠나는 여정</em><br>
+                <strong class="title">필라테스 캠퍼스 5기를 모집합니다.<br></strong>
+              </h2>       
+              <p class="desc">
+                <span>자격 요건</span>
+                지방의회의 조직·권한·의원선거와 지방자치단체의 장의 선임방법 기타 지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다. 대통령은 국가의 독립·영토의 보전·국가의 계속성과 헌법을 수호할 책무를 진다.
+              </p>     
+              <p class="desc">
+                <span>신청 방법</span>
+                교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. 모든 국민은 언론·출판의 자유와 집회·결사의 자유를 가진다.
+              </p>
+              <button class="button">
+                <span><strong>신청하기</strong></span>
+              </button>
+            </div>
+            <!-- //campus_description -->
           </div>
           <div class="line">
             <svg width="1254" height="1" viewBox="0 0 1254 1" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -884,6 +933,30 @@
     </section>
     <!-- //promotion -->
     
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide2">
+
+        </div>
+        <div class="swiper-slide2">
+          
+        </div>
+        <div class="swiper-slide2"></div>
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
     <section id="community">
       <div class="container">
         <div class="row">
@@ -969,7 +1042,7 @@
               <a href="#">
                 <picture>
                   <source media="(min-width: 800px)" srcset="img/video@3x.jpg">
-                  <source media="(min-width: 600px)" srcset="img/video@2x@2x.jpg">
+                  <source media="(min-width: 600px)" srcset="img/video@2x.jpg">
                   <img src="img/video.jpg" srcset="img/video.jpg 1x, img/video@2x.jpg 2x, img/video@3x.jpg 3x" alt="메인 배너">
                 </picture>
 
@@ -1120,6 +1193,11 @@
     //메뉴 슬라이드
     $(".lnb ul li").hover(function(){
       $(this).find(".menu2").stop().slideToggle();
+    });
+
+    //메뉴 슬라이드 반응형
+    $(".menu_bar").click(function(){
+      $(".m_nav").stop().fadeToggle(0.3);
     });
 
     const swiper = new Swiper('.swiper-container', {

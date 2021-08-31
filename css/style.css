@@ -13,7 +13,7 @@
 /* 가운데 영역 */
 .container {width: 1440px; margin: 0 auto;}
 .row {margin: 0 93px;}
-.line {text-align: center; padding: 50px 0;}
+.line {width: 100%; text-align: center; padding: 50px 0;}
 
 /* 고정값 */
 .sub_title {margin-bottom: 5px;}
@@ -44,6 +44,7 @@ button {cursor: pointer;}
   padding: 15px 0;
 }
 
+/* lnb */
 .header .menu_bar {display: none; position: absolute; top: 33px; right: 0;}
 
 .header .lnb {position: absolute; top: 29px; right: 236px;}
@@ -74,10 +75,39 @@ button {cursor: pointer;}
   cursor: pointer;
 }
 
+/* m_nav */
+.m_nav {
+  display: none;
+  text-align: center; 
+}
+.m_menu {
+  z-index: 10;
+  position: absolute; top: 100px; left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, .9); 
+  padding: 10px;
+  box-sizing: border-box;
+}
+.m_menu > li > a {
+  padding: 3px;
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+.m_menu > li > ul > li > a {
+  display: block; 
+  color: #565656;
+}
+
 /* main_banner */
 .main_banner {position: relative;}
-.main_banner picture img {width: 100%; height: 750px;}
-.description {position: absolute; top: 165px; right: 72px;}
+.main_banner picture img {width: 1440px;
+  height: 750px;}
+.description {
+  position: absolute; top: 50%; right: 72px;
+  transform: translateY(-50%);
+}
 .description .title {font-size: 48px; font-weight: bold; color: #2c2620;} 
 .description .desc {font-size: 15px; color: #565656; margin-top: 40px; width: 471px; height: 121px;}
 .description .white {color: #fff; text-shadow: 1px 1px 15px rgba(0,0,0,.3);}
@@ -101,12 +131,6 @@ button {cursor: pointer;}
   /* background: #ccc; */
 }
 .program .step svg {width: 100%; text-align: center;}
-.program .step svg:hover {
-  width: 270px;
-  height: 270px;
-  border-radius: 50%;
-  background: salmon;
-}
 .program .desc {width: 100%;}
 .program .desc h2{
   font-size: 20px;
@@ -135,8 +159,10 @@ button {cursor: pointer;}
   height: 658px;
 }
 .meal_description {
-  position: absolute; top: 120px; left: 0;
-  margin-left: 146px;
+  z-index: 20;
+  position: absolute; top: 50%; left: 0;
+  transform: translateY(-50%);
+  margin: 0 0 0 146px;
 }
 .meal_description .sub_title {
   font-size: 20px;
@@ -165,6 +191,11 @@ button {cursor: pointer;}
 /* campus */
 .campus {
   position: relative;
+}
+.campus .illust {
+  width: 632px;
+  height: 561px;
+  position: absolute; top: 0px; right:  100px;
 }
 .campus .campus_description {
   width: 577px; height: 506px;
@@ -205,9 +236,6 @@ button {cursor: pointer;}
   margin-top: 48px;
   font-size: 20px;
   font-weight: 800;
-}
-.campus .illust {
-  position: absolute; top: 0px; right: 100px;
 }
 
 /* promotion */
@@ -468,21 +496,128 @@ button {cursor: pointer;}
 
 /* 미디어쿼리 */
 @media (max-width: 1290px){
+  .line {width: 100%;} 
+
   .container {width: 100%;}
+
   .row {margin: 0 45px;}
+
+  .main_banner picture {
+    width: 768px;
+  }
+  .main_banner picture img {
+  }
+
+  .promotion .illust svg {
+    width: 600px;
+  }
+
+  .review .content {
+    width: 100%;
+  }
+
+  .online_contents .video img {
+    width: 100%;
+    height: 100%;
+  }
+  
 } 
 
 @media (max-width: 1024px){
-  .header .nav, .header .search {display: none;}
+  .header .lnb, .header .search {display: none;}
   .header .menu_bar {display: block;}
+
+  .description .title {font-size: 32px;}
+  .description .desc {width: 300px; font-size: 12px;}
+  .description .button {margin-top: 20px;}
+
+  .meal_img picture img { 
+    position: absolute; top: 0; right: -200px;
+    width: 781px;
+  }
+  .meal_description {
+    z-index: 20;
+    margin-left: 45px;
+  }
+  
+  .campus .illust {display: none;}
+
+  .campus .campus_description {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .promotion .illust svg {
+    width: 420px;
+    height: 254px;
+  }
+
+  .online_contents {display: block;}
+
+  .video .play i {font-size: 40px;}
+
+  .video_description {margin: 20px 15px 0 15px;}
+  .video_description h2 {margin-bottom: 20px;}
+  .video_description .button {margin-top: 20px;}
 }
 
 @media (max-width: 960px){
+  .description .title {font-size: 24px;}
+  .description .desc {width: 187px; font-size: 12px; margin: 20px 0 15px 0;}
+  .description .button {
+    width: 127px;
+    height: 38px;
+    font-size: 12px;
+    margin-top: 20px; 
+  }
+
+  .promotion .illust svg {width: 90%;}
 
 }
 
 @media (max-width: 768px){
+  .community .title {font-size: 32px;}
+  .community .sub_title {font-size: 15px;}
+}
 
+@media (max-width: 640px){
+  .description .title {font-size: 24px;}
+  .description .desc {display: none;}
+  .description .button {
+    width: 127px;
+    height: 38px;
+    font-size: 12px;
+    margin-top: 15px; 
+  }
+
+  .program {display: block;}
+  .program .step {
+    width: 100%;
+    height: 100%;
+  }
+
+  .promotion .illust svg {display: none;}
+
+  .community .title {font-size: 24px;}
+  .community .sub_title {font-size: 12px;}
+
+
+  .video_description .desc {font-size: 12px;}
+  /* .video_description button {
+    width: 123px;
+    height: 40px;
+  } */
+  .video_description h2 .sub_title {font-size: 15px; margin: 0;}
+  .video_description h2 .title {font-size: 24px;} 
+  .video_description .pop_btn {width: 123px;
+    height: 40px; font-size: 12px;}
+  .video_description .more_btn {width: 123px;
+    height: 40px; font-size: 12px;}
+
+  .get_in_touch .title {font-size: 24px; margin-bottom: 5px;}
+  .get_in_touch .sub_title {font-size: 12px;}
+  
 }
 
 @media (max-width: 480px){
