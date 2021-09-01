@@ -9,11 +9,12 @@
 #promotion {width: 100%;}
 #community {width: 100%;}
 #get_in_touch {width: 100%;}
+#footer {width: 100%; padding: 50px 0 50px 0; background: #fbbe20;}
 
 /* 가운데 영역 */
 .container {width: 1440px; margin: 0 auto;}
 .row {margin: 0 93px;}
-.line {width: 100%; text-align: center; padding: 50px 0;}
+.line svg {width: 1254px; text-align: center; padding: 50px 0;}
 
 /* 고정값 */
 .sub_title {margin-bottom: 5px;}
@@ -102,6 +103,10 @@ button {cursor: pointer;}
 
 /* main_banner */
 .main_banner {position: relative;}
+.main_banner picture {
+  width: 1440px;
+  height: 750px;
+}
 .main_banner picture img {width: 1440px;
   height: 750px;}
 .description {
@@ -148,21 +153,24 @@ button {cursor: pointer;}
 
 /* meal_box */
 .meal_box {
+  width: 100%;
+  overflow: hidden;
   position: relative; 
 }
-.meal_img{
-  display: flex;
-  justify-content: flex-end;
-}
 .meal_img picture{
+  position: absolute; top: 0; right: 0;
+  width: 889px;
+  height: 658px;
+}
+.meal_img{
   width: 889px;
   height: 658px;
 }
 .meal_description {
   z-index: 20;
-  position: absolute; top: 50%; left: 0;
-  transform: translateY(-50%);
-  margin: 0 0 0 146px;
+  position: absolute; top: 40%; left: 0;
+  transform: translateY(-40%);
+  margin: 0 0 0 93px;
 }
 .meal_description .sub_title {
   font-size: 20px;
@@ -275,7 +283,11 @@ button {cursor: pointer;}
 }
 
 /* community */
-.community {}
+.community {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
 .community h2 {
   text-align: center;
   margin-bottom: 50px;
@@ -291,25 +303,20 @@ button {cursor: pointer;}
   font-weight: 600;
 }
 
-.review {
-  display: flex;
-  justify-content: space-between;
-}
-.review .content {
+.swiper-container2 .swiper-slide {
   width: 350px;
-  height: 560px;
+  height: 100%;
 }
-.review picture {
+.swiper-slide picture {
   display: inline;
 }
-.review .content img {
+.swiper-slide .content img {
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.25);
   border-radius: 30px 30px 0 0;
 }
-.review .content_description span {
+.swiper-slide .content_description span {
   display: block;
-  width: 350px;
-  height: 180px;
+  width: 100%;
   background: #fff;
   border-radius: 0 0 30px 30px;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.25);
@@ -317,20 +324,20 @@ button {cursor: pointer;}
   padding: 30px;
   box-sizing: border-box;
 }
-.review .content_description span em {display: block;}
-.review .content_description span em.content_title {
+.swiper-slide .content_description span em {display: block;}
+.swiper-slide .content_description span em.content_title {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 12px;
 }
-.review .content_description span em.desc {
+.swiper-slide .content_description span em.desc {
   font-size: 24px;
   color: #777;
 }
-.review .content_description span em.more {
+.swiper-slide .content_description span em.more {
   font-size: 15px;
   text-align: right;
-  padding-top: 45px;
+  padding-top: 20px;
   color: #aaa;
 }
 
@@ -446,8 +453,6 @@ button {cursor: pointer;}
 
 /* footer */
 .footer {
-  background: #fbbe20;
-  padding: 60px 93px;
   display: flex;
   justify-content: space-between;
 }
@@ -474,6 +479,9 @@ button {cursor: pointer;}
   padding: 5px;
   margin-right: 50px;
 }
+.footer ul.nav > li a:last-child {
+  margin-right: 0;
+}
 .footer ul.nav li:last-child {
   margin-right: 0;
 }
@@ -496,16 +504,24 @@ button {cursor: pointer;}
 
 /* 미디어쿼리 */
 @media (max-width: 1290px){
-  .line {width: 100%;} 
-
   .container {width: 100%;}
 
   .row {margin: 0 45px;}
+
+  .meal_box {}
+
+  .line svg {
+    width: 100%;
+  } 
 
   .main_banner picture {
     width: 768px;
   }
   .main_banner picture img {
+  }
+
+  .meal_img{
+    width: 100%;
   }
 
   .promotion .illust svg {
@@ -520,6 +536,12 @@ button {cursor: pointer;}
     width: 100%;
     height: 100%;
   }
+
+  .get_in_touch form {
+    width: 100%;
+  }
+
+  .footer ul.nav > li a {margin-right: 30px;}
   
 } 
 
@@ -527,13 +549,10 @@ button {cursor: pointer;}
   .header .lnb, .header .search {display: none;}
   .header .menu_bar {display: block;}
 
-  .description .title {font-size: 32px;}
-  .description .desc {width: 300px; font-size: 12px;}
-  .description .button {margin-top: 20px;}
-
+  .meal_img picture {width: 781px; height: 578px;}
   .meal_img picture img { 
     position: absolute; top: 0; right: -200px;
-    width: 781px;
+    width: 781px; height: 578px;
   }
   .meal_description {
     z-index: 20;
@@ -553,6 +572,16 @@ button {cursor: pointer;}
     height: 254px;
   }
 
+  .swiper-slide .content_description span em.content_title {
+    font-size: 18px;
+  }
+  .swiper-slide .content_description span em.desc {
+    font-size: 15px;
+  }
+  .swiper-slide .content_description span em.more {
+    font-size: 12px;
+  }
+
   .online_contents {display: block;}
 
   .video .play i {font-size: 40px;}
@@ -560,36 +589,72 @@ button {cursor: pointer;}
   .video_description {margin: 20px 15px 0 15px;}
   .video_description h2 {margin-bottom: 20px;}
   .video_description .button {margin-top: 20px;}
+
+  .footer ul.nav {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer ul.nav > li > ul {display: none;}
 }
 
 @media (max-width: 960px){
-  .description .title {font-size: 24px;}
-  .description .desc {width: 187px; font-size: 12px; margin: 20px 0 15px 0;}
-  .description .button {
-    width: 127px;
-    height: 38px;
-    font-size: 12px;
-    margin-top: 20px; 
-  }
+  .description .title {font-size: 32px;}
+  .description .desc {width: 300px; font-size: 12px;}
+  .description .button {margin-top: 20px;}
 
   .promotion .illust svg {width: 90%;}
 
 }
-
 @media (max-width: 768px){
+  .meal_img {display: none;}
+  .meal_description {
+    transform: translate(0,0);
+    position: static;
+    font-size: 32px; font-weight: bold; color: #2c2620;
+    border: 2px solid #2c2620;
+    border-radius: 30px;
+    background: #fff;
+    padding: 56px 42px 63px 52px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 10px rgba(0,0,0,.1);
+    margin: 0 45px 0 45px;
+  }
+  .meal_description .sub_title {
+    font-size: 15px;
+  }
+  .meal_description .title {
+    font-size: 32px;
+  }
+  .meal_description .desc {
+    width: 100%;
+    height: 100%;
+    font-weight: 400;
+  }
+  .meal_description .button {
+    width: 100%;
+    height: 60px;
+  }
+
+  .campus .campus_description .button {
+    width: 100%;
+  }
+  
   .community .title {font-size: 32px;}
   .community .sub_title {font-size: 15px;}
+
+  .footer ul.nav {
+    display: none;
+  }
 }
 
 @media (max-width: 640px){
-  .description .title {font-size: 24px;}
-  .description .desc {display: none;}
-  .description .button {
-    width: 127px;
-    height: 38px;
-    font-size: 12px;
-    margin-top: 15px; 
+  .row {margin: 0 20px;}
+
+  .main_banner picture img {
+    height: 500px;
   }
+  .description .title1 {color: #fff;}
+  .description .decs1 {color: #fff;}
 
   .program {display: block;}
   .program .step {
@@ -597,7 +662,22 @@ button {cursor: pointer;}
     height: 100%;
   }
 
+  .meal_description {margin: 0 20px 0 20px;}
+
   .promotion .illust svg {display: none;}
+  .promotion_description {
+    font-size: 32px; font-weight: bold; color: #2c2620;
+    border: 2px solid #2c2620;
+    border-radius: 30px;
+    background: #fff;
+    padding: 56px 42px 63px 52px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 10px rgba(0,0,0,.1);
+  }
+  .promotion_description .button {
+    width: 100%;
+    text-align: center;
+  }
 
   .community .title {font-size: 24px;}
   .community .sub_title {font-size: 12px;}
@@ -617,15 +697,51 @@ button {cursor: pointer;}
 
   .get_in_touch .title {font-size: 24px; margin-bottom: 5px;}
   .get_in_touch .sub_title {font-size: 12px;}
-  
 }
 
 @media (max-width: 480px){
+  .description .title {font-size: 24px;}
+  .description .desc {display: none;}
+  .description .button {
+    width: 127px;
+    height: 38px;
+    font-size: 12px;
+    margin-top: 15px; 
+  }
 
+  .meal_description .sub_title {font-size: 15px;}
+  .meal_description .title {font-size: 24px;}
+  .meal_description .desc {font-size: 12px;}
+  .meal_description .button {font-size: 15px;}
+
+  .campus .campus_description h2 .sub_title {font-size: 15px;}
+  .campus .campus_description h2 .title {font-size: 24px;}
+  .campus .campus_description .button {font-size: 15px;}
+
+  .promotion_description h2 .sub_title {font-size: 15px;}
+  .promotion_description h2 .title {font-size: 24px;}
+  .promotion_description .button {font-size: 15px;}
+
+  footer .source p {display: none;}
 }
 
 @media (max-width: 350px){
+  .meal_description {text-align: center; padding: 20px;}
+  .meal_description .sub_title {display: none;}
+  .meal_description .title {font-size: 15px;}
+  .meal_description .button {font-size: 12px;}
 
+  .campus .campus_description {text-align: center; padding: 20px;}
+  .campus .campus_description .sub_title {display: none;}
+  .campus .campus_description h2 .title {font-size: 15px;}
+  .campus .campus_description .desc {text-align: left; font-size: 12px;}
+  .campus .campus_description .button {font-size: 12px;}
+
+  .promotion_description {text-align: center; padding: 20px;}
+  .promotion_description h2 .sub_title {display: none;}
+  .promotion_description h2 .title {font-size: 15px;}
+  .promotion_description .desc {font-size: 12px;}
+  .promotion_description .button {font-size: 12px;}
 }
 
 
